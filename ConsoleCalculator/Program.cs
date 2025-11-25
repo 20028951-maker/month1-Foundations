@@ -23,13 +23,6 @@ class Program
                 break;
             }
 
-            if (choice != "1" && choice != "2" && choice != "3" && choice != "4")
-            {
-                Console.WriteLine("Invalid option. Press Enter to try again.");
-                Console.ReadLine();
-                continue;
-            }
-
             Console.Write("Enter first number: ");
             if (!double.TryParse(Console.ReadLine(), out double a))
             {
@@ -72,6 +65,9 @@ class Program
                         result = a / b;
                         Console.WriteLine($"Result: {a} / {b} = {result}");
                     }
+                    break;
+                default:
+                    Console.WriteLine("Invalid option.");
                     break;
             }
 
